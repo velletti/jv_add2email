@@ -19,13 +19,19 @@
              <trans-unit id="sendMeNewsletter">
                 <source>I would like to receive Newsletter</source>
             </trans-unit>
+             <trans-unit id="newsletterStatus">
+                <source>Your Newsletter Status:</source>
+            </trans-unit>
+
             <trans-unit id="newsletterStatusOn">
                 <source>Newsletter is activated</source>
             </trans-unit>
             <trans-unit id="newsletterStatusOff">
                 <source>Newsletter is deactivated</source>
             </trans-unit>
-
+            <trans-unit id="pleaseLogIn">
+                <source>You need to login / register before you can see your newsletter status</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

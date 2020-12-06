@@ -31,20 +31,22 @@
 				<f:if condition="{newsletter}">
 					<f:then>
 						<div class="alert alert-success">
-							<f:translate key="registered With">You are registered to our Newsletter with this Email Address:</f:translate><br>
+							<f:translate key="newsletterStatus">newsletterStatus:</f:translate><br>
 							<br>
 							<span class="left clearfix">
-								<f:link.action action="remove"><span class="fa fa-2x fa-toggle-on"></span></f:link.action> {user.email}
+								<f:link.action action="remove" title="{f:translate(key:'removeEmail' , default: 'Stop sending Newsletter')}"><span class="fa fa-2x fa-toggle-on"></span></f:link.action> {user.email}<br>
+								<span class="small"><f:translate key="newsletterStatusOn">newsletter is activ</f:translate><br></span>
 							</span>
 						</div>
 
 					</f:then>
 					<f:else>
 						<div class="alert alert-info">
-							<f:translate key="notRegistered With">Register to our Newsletter with this Email Address:</f:translate><br>
+							<f:translate key="newsletterStatus">newsletterStatus</f:translate><br>
 							<br>
 							<span class="left clearfix">
-								<f:link.action action="add"><span class="fa fa-2x fa-toggle-off"></span></f:link.action> {user.email}
+								<f:link.action action="add" title="{f:translate(key:'addEmail' , default: 'Please send me Newsletter')}"><span class="fa fa-2x fa-toggle-off"></span></f:link.action> {user.email}
+							<span class="small"><f:translate key="newsletterStatusOff">newsletter is NOT activ</f:translate><br></span>
 							</span>
 						</div>
 					</f:else>

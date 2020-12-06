@@ -23,6 +23,10 @@
                     <source>I would like to receive Newsletter</source>
                     <target>Ich möchte Newsletter erhalten</target>
                 </trans-unit>
+                  <trans-unit id="newsletterStatus">
+                    <source>Your Newsletter Status:</source>
+                    <target>Ihr Newsletter Status:</source>
+                </trans-unit>
                  <trans-unit id="newsletterStatusOn">
                     <source>Newsletter is activated</source>
                     <target>Newsletterversand ist aktiv</target>
@@ -30,6 +34,11 @@
                 <trans-unit id="newsletterStatusOff">
                     <source>Newsletter is deactivated</source>
                     <target>Newsletterversand ist inaktiv</target>
+                </trans-unit>
+
+                <trans-unit id="pleaseLogIn">
+                    <source>You need to login / register before you can see your newsletter status</source>
+                    <target>Bitte erst einloggen / registrieren, um den Newsletter Status zu sehen oder ändern zu können.</target>
                 </trans-unit>
 
     		</body>
