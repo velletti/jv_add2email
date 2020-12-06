@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2019-10-03T11:12:41Z" product-name="jv_add2email">
+    		<header></header>
+    		<body>
+    			<trans-unit id="add2email.name">
+    				<source>Let  feuser handle newsletter optin</source>
+    				<target>Let  feuser handle newsletter optin</target>
+    			</trans-unit>
+    			<trans-unit id="add2email.description">
+    				<source>needs directmail</source>
+    				<target>needs directmail</target>
+    			</trans-unit>
+                <trans-unit id="flexform.title">
+                    <source>title or message</source>
+                    <target>title or message</target>
+                </trans-unit>
+                 <trans-unit id="flexform.description">
+                    <source>Text shown to user</source>
+                    <target>Text shown to user</target>
+                </trans-unit>
+                 <trans-unit id="sendMeNewsletter">
+                    <source>I would like to receive Newsletter</source>
+                    <target>Ich möchte Newsletter erhalten</target>
+                </trans-unit>
+                 <trans-unit id="newsletterStatusOn">
+                    <source>Newsletter is activated</source>
+                    <target>Newsletterversand ist aktiv</target>
+                </trans-unit>
+                <trans-unit id="newsletterStatusOff">
+                    <source>Newsletter is deactivated</source>
+                    <target>Newsletterversand ist inaktiv</target>
+                </trans-unit>
+
+    		</body>
+    	</file>
+</xliff>

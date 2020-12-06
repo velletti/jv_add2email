@@ -5,7 +5,7 @@
 
 		<body>
 			<trans-unit id="add2email.name">
-				<source>Let  feuser hanlde newsletter optin</source>
+				<source>Let  feuser handle newsletter optin</source>
 			</trans-unit>
 			<trans-unit id="add2email.description">
 				<source>needs directmail</source>
@@ -15,6 +15,15 @@
             </trans-unit>
              <trans-unit id="flexform.description">
                 <source>Text shown to user</source>
+            </trans-unit>
+             <trans-unit id="sendMeNewsletter">
+                <source>I would like to receive Newsletter</source>
+            </trans-unit>
+            <trans-unit id="newsletterStatusOn">
+                <source>Newsletter is activated</source>
+            </trans-unit>
+            <trans-unit id="newsletterStatusOff">
+                <source>Newsletter is deactivated</source>
             </trans-unit>
 
 		</body>
