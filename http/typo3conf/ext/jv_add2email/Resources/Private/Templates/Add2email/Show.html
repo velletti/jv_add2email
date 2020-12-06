@@ -1,0 +1,63 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="content">
+		<f:flashMessages as="flashMessages">
+			<f:if condition="{flashMessages}">
+					<f:switch expression="{flashMessages.0.severity}">
+						<f:case value="0">
+							<f:variable name="alertClass">alert-success</f:variable>
+							<f:variable name="alertIcon">far fa-check-square</f:variable>
+						</f:case>
+						<f:case value="2">
+							<f:variable name="alertClass">alert-danger</f:variable>
+							<f:variable name="alertIcon">far fa-bug</f:variable>
+						</f:case>
+						<f:defaultCase>
+							<f:variable name="alertClass">alert-notice</f:variable>
+							<f:variable name="alertIcon">far fa-info</f:variable>
+						</f:defaultCase>
+					</f:switch>
+					<div class="alert {alertClass} my-3" title="{flashMessages.0.message}">
+						<div>
+							<i class="{alertIcon} mr-2 "></i>{flashMessages.0.message}
+						</div>
+					</div>
+			</f:if>
+		</f:flashMessages>
+
+		<f:if condition="{user}">
+			<f:then>
+				<f:if condition="{newsletter}">
+					<f:then>
+						<div class="alert alert-success">
+							<f:translate key="registered With">You are registered to our Newsletter with this Email Address:</f:translate><br>
+							<br>
+							<span class="left clearfix">
+								<f:link.action action="remove"><span class="fa fa-2x fa-toggle-on"></span></f:link.action> {user.email}
+							</span>
+						</div>
+
+					</f:then>
+					<f:else>
+						<div class="alert alert-info">
+							<f:translate key="notRegistered With">Register to our Newsletter with this Email Address:</f:translate><br>
+							<br>
+							<span class="left clearfix">
+								<f:link.action action="add"><span class="fa fa-2x fa-toggle-off"></span></f:link.action> {user.email}
+							</span>
+						</div>
+					</f:else>
+				</f:if>
+			</f:then>
+			<f:else>
+				<div class="alert alert-warning">
+					<f:translate key="pleaseLogIn">Please Login with your email Address first!</f:translate>
+				</div>
+			</f:else>
+		</f:if>
+
+
+
+	</f:section>
+</html>
