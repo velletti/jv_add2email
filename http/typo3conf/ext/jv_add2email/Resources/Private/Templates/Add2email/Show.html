@@ -31,7 +31,7 @@
 				<f:if condition="{newsletter}">
 					<f:then>
 						<div class="alert alert-success">
-							<f:translate key="newsletterStatus">newsletterStatus:</f:translate><br>
+							<f:translate key="newsletterStatus">Newsletter Status:</f:translate><br>
 							<br>
 							<span class="left clearfix">
 								<f:link.action action="remove" title="{f:translate(key:'removeEmail' , default: 'Stop sending Newsletter')}"><span class="fa fa-2x fa-toggle-on"></span></f:link.action> {user.email}<br>
@@ -42,7 +42,7 @@
 					</f:then>
 					<f:else>
 						<div class="alert alert-info">
-							<f:translate key="newsletterStatus">newsletterStatus</f:translate><br>
+							<f:translate key="newsletterStatus">Newsletter Status</f:translate><br>
 							<br>
 							<span class="left clearfix">
 								<f:link.action action="add" title="{f:translate(key:'addEmail' , default: 'Please send me Newsletter')}"><span class="fa fa-2x fa-toggle-off"></span></f:link.action> {user.email}
@@ -54,7 +54,7 @@
 			</f:then>
 			<f:else>
 				<div class="alert alert-warning">
-					<f:translate key="pleaseLogIn">Please Login with your email Address first!</f:translate>
+					<f:translate key="pleaseLogIn">Please Login/register with your email Address first!</f:translate>
 				</div>
 			</f:else>
 		</f:if>

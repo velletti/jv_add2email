@@ -25,7 +25,7 @@
                 </trans-unit>
                   <trans-unit id="newsletterStatus">
                     <source>Your Newsletter Status:</source>
-                    <target>Ihr Newsletter Status:</source>
+                    <target>Ihr Newsletter Status:</target>
                 </trans-unit>
                  <trans-unit id="newsletterStatusOn">
                     <source>Newsletter is activated</source>
