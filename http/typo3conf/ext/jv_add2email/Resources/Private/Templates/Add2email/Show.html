@@ -41,8 +41,8 @@
 
 					</f:then>
 					<f:else>
-						<div class="alert alert-info">
-							<f:translate key="newsletterStatus">Newsletter Status</f:translate><br>
+						<div class="alert alert-secondary">
+							<h3><f:translate key="newsletterStatus">Newsletter Status</f:translate><br></h3>
 							<br>
 							<span class="left clearfix">
 								<f:link.action action="add" title="{f:translate(key:'addEmail' , default: 'Please send me Newsletter')}"><span class="fa fa-2x fa-toggle-off"></span></f:link.action> {user.email}
