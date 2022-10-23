@@ -1,5 +1,10 @@
 
 plugin.tx_jvadd2email_add2email {
+
+
+}
+
+plugin.tx_jvadd2email {
     view {
         templateRootPaths.0 = EXT:jv_add2email/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_jvadd2email.view.templateRootPath}
@@ -18,5 +23,7 @@ plugin.tx_jvadd2email_add2email {
     mvc {
         callDefaultActionIfActionCantBeResolved = 1
     }
-}
 
+    # set this to 1 to get infos in Case of problems to get more debug output
+    settings.debug = 0
+}
