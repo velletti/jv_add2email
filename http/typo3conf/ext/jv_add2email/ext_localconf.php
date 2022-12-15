@@ -1,19 +1,19 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+defined('TYPO3') || die('Access denied.');
 
 call_user_func(
     function()
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'JVE.JvAdd2email',
+            'JvAdd2email',
             'Add2email',
             [
-                'Add2email' => 'show,add,remove,unsubscribe'
+                \JVE\JvAdd2email\Controller\Add2emailController::class => 'show,add,remove,unsubscribe'
             ],
             // non-cacheable actions
             [
-                'Add2email' => 'show,add,remove,unsubscribe'
+                \JVE\JvAdd2email\Controller\Add2emailController::class => 'show,add,remove,unsubscribe'
             ]
         );
 

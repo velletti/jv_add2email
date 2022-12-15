@@ -1,12 +1,12 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+defined('TYPO3') || die('Access denied.');
 
 call_user_func(
     function()
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'JVE.JvAdd2email',
+            'JvAdd2email',
             'Add2email',
             'Let Frontenduser handle Newsletter Optin'
         );

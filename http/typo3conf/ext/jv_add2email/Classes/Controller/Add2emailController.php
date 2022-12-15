@@ -1,6 +1,9 @@
 <?php
 namespace JVE\JvAdd2email\Controller;
 
+use JVE\JvAdd2email\Domain\Repository\FeUserRepository;
+use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Extbase\Http\ForwardResponse;
 use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
@@ -24,7 +27,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
  */
 class Add2emailController extends ActionController
 {
-    /** @var \JVE\JvAdd2email\Domain\Repository\FeUserRepository $feUserRepository */
+    /** @var FeUserRepository $feUserRepository */
     public $feUserRepository ;
 
     public function initializeAction()
@@ -37,7 +40,7 @@ class Add2emailController extends ActionController
      *
      * @return void
      */
-    public function showAction()
+    public function showAction(): ResponseInterface
     {
         $user = $GLOBALS['TSFE']->fe_user->user ;
         if(is_array($user) && array_key_exists("uid" , $user)) {
@@ -45,6 +48,7 @@ class Add2emailController extends ActionController
             $this->view->assign('user', $user);
             $this->view->assign('newsletter', $user['module_sys_dmail_newsletter']);
         }
+        return $this->htmlResponse();
 
 
     }
@@ -52,7 +56,7 @@ class Add2emailController extends ActionController
     /**
      * action addAction
      *
-     * @return void
+     *
      */
     public function addAction()
     {
@@ -65,7 +69,7 @@ class Add2emailController extends ActionController
                 $this->redirect("show" , null, null , array("hash" => ($user['tstamp'] * $user['uid'] )) ) ;
             }
         }
-        $this->forward("show" ) ;
+        return new ForwardResponse('show');
 
     }
 
@@ -74,7 +78,7 @@ class Add2emailController extends ActionController
     /**
      * action removeAction
      *
-     * @return void
+     *
      */
     public function removeAction()
     {
@@ -87,7 +91,7 @@ class Add2emailController extends ActionController
                 $this->redirect("show" , null, null , array("hash" => ($user['tstamp'] * $user['uid'] ) ) ) ;
             }
         }
-        $this->forward("show" ) ;
+        return new ForwardResponse('show');
     }
 
     /**
