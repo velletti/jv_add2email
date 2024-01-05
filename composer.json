@@ -21,7 +21,7 @@
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "jv_add2email",
+            "extension-key": "jv_add2email"
         }
     }
 }
