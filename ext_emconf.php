@@ -8,10 +8,10 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Joerg Velletti',
     'author_email' => 'typo3@velletti.de',
     'state' => 'beta',
-    'version' => '11.5.2',
+    'version' => '12.4.1',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-11.45.99',
+            'typo3' => '12.4.0-12.4.99',
         ],
         'conflicts' => [],
         'suggests' => [],
