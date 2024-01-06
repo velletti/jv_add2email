@@ -33,7 +33,7 @@ class Add2emailController extends ActionController
     public function initializeAction()
     {
         parent::initializeAction();
-        $this->feUserRepository = GeneralUtility::makeInstance( "JVE\\JvAdd2email\\Domain\\Repository\\FeUserRepository");
+        $this->feUserRepository = GeneralUtility::makeInstance( FeUserRepository::class);
     }
     /**
      * action list

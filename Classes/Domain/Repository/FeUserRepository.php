@@ -31,7 +31,7 @@ class FeUserRepository {
     public $connection ;
 
     public function __construct(  ) {
-        $this->connectionPool = GeneralUtility::makeInstance( "TYPO3\\CMS\\Core\\Database\\ConnectionPool");
+        $this->connectionPool = GeneralUtility::makeInstance( ConnectionPool::class);
         $this->queryBuilder =  $this->connectionPool->getQueryBuilderForTable('fe_users') ;
         $this->connection = $this->connectionPool->getConnectionForTable('fe_users') ;
     }
@@ -43,7 +43,7 @@ class FeUserRepository {
             ->setMaxResults(1)
              ;
 
-        return $this->queryBuilder->execute()->fetch() ;
+        return $this->queryBuilder->executeQuery()->fetch() ;
 
     }
 
@@ -53,7 +53,7 @@ class FeUserRepository {
             ->set('module_sys_dmail_newsletter', $value )
             ->set('module_sys_dmail_html', $value ) ;
 
-        $this->queryBuilder->execute() ;
+        $this->queryBuilder->executeStatement() ;
 
         if ( !$this->connection->errorInfo() ) {
             return true ;
